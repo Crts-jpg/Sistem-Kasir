@@ -15,9 +15,9 @@ router.post('/', async (req, res) => {
       }
     });
 
-    res.status(201).json({ message: "berhasil menambahkan barang", data: Tbarang });
+    res.status(201).send({ message: "berhasil menambahkan barang", data: Tbarang });
   } catch (error) {
-      console.error("gagal menambahkan barang",error)
+    console.error("gagal menambahkan barang",error)
     res.status(500).json({ message: "gagal menambahkan barang" })
 
   }

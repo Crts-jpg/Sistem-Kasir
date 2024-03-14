@@ -23,17 +23,16 @@ model User {
 }
 
 model Barang {
-  id        String      @id @default(uuid())
+  id        String      @id
   name      String
   price     Float
-  stock     Int
   createdAt DateTime    @default(now())
   updatedAt DateTime    @updatedAt
   Transaksi Transaksi[]
 }
 
 model Transaksi {
-  id        String   @id @default(uuid())
+  id        String   @id
   barangId  String
   barang    Barang   @relation(fields: [barangId], references: [id])
   amount    Int
