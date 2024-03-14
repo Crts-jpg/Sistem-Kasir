@@ -30,7 +30,7 @@ app.use('/', indexRouter);
 app.use('/delete', deleteBarang);
 app.use('/edit', editBarang);
 app.use('/get', getBarang);
-app.use('/tambah', tambahBarang);
+app.use('/add', tambahBarang);
 app.use('/transaksi', Transaksi);
 
 // catch 404 and forward to error handler
