@@ -34,5 +34,4 @@ main()
   });
 
 
-  // i dont think i need this right?
-  
+  // i dont think this is the right way to seed data, but it works for now
