@@ -4,14 +4,14 @@ const { PrismaClient } = require('@prisma/client');
 
 const prisma = new PrismaClient();
 
-router.post('/', async (req, res) => {
+router.post('/tambahBarang', async (req, res) => {
   const { name, price, stock } = req.body;
   try {
     const Tbarang = await prisma.barang.create({
       data: {
+        id,
         name,
         price,
-        stock
       }
     });
 
