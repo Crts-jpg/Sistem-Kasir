@@ -4,7 +4,7 @@ const { PrismaClient } = require('@prisma/client');
 
 const prisma = new PrismaClient();
 
-router.get('/barang', async (req, res) => { // Menggunakan path '/get/barang' di sini
+router.get('/barang', async (req, res) => {
   try {
     const Tbarang = await prisma.barang.findMany();
     res.status(200).json({ message: "berhasil menampilkan barang", data: Tbarang });

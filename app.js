@@ -12,12 +12,8 @@ const getBarang = require('./routes/getBarang');
 const tambahBarang = require('./routes/tambahBarang');
 const Transaksi = require('./routes/Transaksi');
 
-
-
 var app = express();
 
-
-// view engine setup
 
 app.use(logger('dev'));
 
@@ -33,7 +29,6 @@ app.use('/get', getBarang);
 app.use('/add', tambahBarang);
 app.use('/transaksi', Transaksi);
 
-// catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
 });

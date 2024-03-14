@@ -32,3 +32,7 @@ main()
   .finally(async () => {    
     await prisma.$disconnect();
   });
+
+
+  // i dont think i need this right?
+  
